@@ -1,4 +1,6 @@
 import pandas as pd
+
+
 import os
 
 data={'Name':['Alice','sam','elon'],
@@ -7,7 +9,11 @@ data={'Name':['Alice','sam','elon'],
 
 df=pd.DataFrame(data)
 
-
+#Adding new row to the df for v2
+new_row={'Name':'GF',
+      'Age':20,
+      'City':'BRAZIL'}
+df.loc[len(df.index)]=new_row
 
 #Ensure the data directory exists at the root level
 
